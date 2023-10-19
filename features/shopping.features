@@ -1,0 +1,10 @@
+Feature: Shopping on the website
+
+  Scenario: Add a product to the cart
+    Given I am on the website "https://magento.softwaretestingboard.com/"
+    When I access the Shop
+    And I filter for a certain category "JavaScript"
+    And I open the Product Page
+    And I add multiple quantities of the product to the cart
+    And I perform a Checkout
+    Then I should see a successful order confirmation
